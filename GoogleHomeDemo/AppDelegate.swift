@@ -12,6 +12,9 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var root: ViewController? {
+        return window?.rootViewController?.childViewControllers.compactMap({$0 as? ViewController}).first
+    }
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
@@ -35,6 +38,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        guard let root = root else { return }
+
+        LocalNotificationManager.shared.requestPermissions { _, _ in
+            root.startPollingForGoogleHome()
+        }
     }
 
     func applicationWillTerminate(_ application: UIApplication) {

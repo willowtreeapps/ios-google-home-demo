@@ -12,6 +12,15 @@
 		E365BF2620877BCA008DBA18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E365BF2420877BCA008DBA18 /* Main.storyboard */; };
 		E365BF2820877BCB008DBA18 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E365BF2720877BCB008DBA18 /* Assets.xcassets */; };
 		E365BF2B20877BCB008DBA18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E365BF2920877BCB008DBA18 /* LaunchScreen.storyboard */; };
+		E365BF3320877C4F008DBA18 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = E365BF3220877C4F008DBA18 /* Models.swift */; };
+		E365BF3520877F7C008DBA18 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E365BF3420877F7C008DBA18 /* ProductCollectionViewCell.swift */; };
+		E365BF3B20878873008DBA18 /* GoogleHomeDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E365BF3620878873008DBA18 /* GoogleHomeDemo.swift */; };
+		E365BF3C20878873008DBA18 /* GoogleHomeDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = E365BF3720878873008DBA18 /* GoogleHomeDetector.swift */; };
+		E365BF3D20878873008DBA18 /* GoogleHomeOnboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E365BF3820878873008DBA18 /* GoogleHomeOnboarding.storyboard */; };
+		E365BF3E20878873008DBA18 /* GoogleHomeOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E365BF3920878873008DBA18 /* GoogleHomeOnboardingViewController.swift */; };
+		E365BF3F20878873008DBA18 /* LocalNotifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E365BF3A20878873008DBA18 /* LocalNotifications.swift */; };
+		E3C483682087E68F00D0DA2B /* NeuzeitGro-Bol.otf in Resources */ = {isa = PBXBuildFile; fileRef = E3C483662087E68F00D0DA2B /* NeuzeitGro-Bol.otf */; };
+		E3C483692087E68F00D0DA2B /* NeuzeitGro-Reg.otf in Resources */ = {isa = PBXBuildFile; fileRef = E3C483672087E68F00D0DA2B /* NeuzeitGro-Reg.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,15 @@
 		E365BF2720877BCB008DBA18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E365BF2A20877BCB008DBA18 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E365BF2C20877BCB008DBA18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E365BF3220877C4F008DBA18 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		E365BF3420877F7C008DBA18 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		E365BF3620878873008DBA18 /* GoogleHomeDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleHomeDemo.swift; sourceTree = "<group>"; };
+		E365BF3720878873008DBA18 /* GoogleHomeDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleHomeDetector.swift; sourceTree = "<group>"; };
+		E365BF3820878873008DBA18 /* GoogleHomeOnboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GoogleHomeOnboarding.storyboard; sourceTree = "<group>"; };
+		E365BF3920878873008DBA18 /* GoogleHomeOnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoogleHomeOnboardingViewController.swift; sourceTree = "<group>"; };
+		E365BF3A20878873008DBA18 /* LocalNotifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalNotifications.swift; sourceTree = "<group>"; };
+		E3C483662087E68F00D0DA2B /* NeuzeitGro-Bol.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeuzeitGro-Bol.otf"; sourceTree = "<group>"; };
+		E3C483672087E68F00D0DA2B /* NeuzeitGro-Reg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NeuzeitGro-Reg.otf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +56,8 @@
 		E365BF1420877BCA008DBA18 = {
 			isa = PBXGroup;
 			children = (
+				E3C483662087E68F00D0DA2B /* NeuzeitGro-Bol.otf */,
+				E3C483672087E68F00D0DA2B /* NeuzeitGro-Reg.otf */,
 				E365BF1F20877BCA008DBA18 /* GoogleHomeDemo */,
 				E365BF1E20877BCA008DBA18 /* Products */,
 			);
@@ -55,7 +75,14 @@
 			isa = PBXGroup;
 			children = (
 				E365BF2020877BCA008DBA18 /* AppDelegate.swift */,
+				E365BF3620878873008DBA18 /* GoogleHomeDemo.swift */,
+				E365BF3720878873008DBA18 /* GoogleHomeDetector.swift */,
+				E365BF3820878873008DBA18 /* GoogleHomeOnboarding.storyboard */,
+				E365BF3920878873008DBA18 /* GoogleHomeOnboardingViewController.swift */,
+				E365BF3A20878873008DBA18 /* LocalNotifications.swift */,
 				E365BF2220877BCA008DBA18 /* ViewController.swift */,
+				E365BF3220877C4F008DBA18 /* Models.swift */,
+				E365BF3420877F7C008DBA18 /* ProductCollectionViewCell.swift */,
 				E365BF2420877BCA008DBA18 /* Main.storyboard */,
 				E365BF2720877BCB008DBA18 /* Assets.xcassets */,
 				E365BF2920877BCB008DBA18 /* LaunchScreen.storyboard */,
@@ -122,9 +149,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3C483692087E68F00D0DA2B /* NeuzeitGro-Reg.otf in Resources */,
 				E365BF2B20877BCB008DBA18 /* LaunchScreen.storyboard in Resources */,
 				E365BF2820877BCB008DBA18 /* Assets.xcassets in Resources */,
+				E3C483682087E68F00D0DA2B /* NeuzeitGro-Bol.otf in Resources */,
 				E365BF2620877BCA008DBA18 /* Main.storyboard in Resources */,
+				E365BF3D20878873008DBA18 /* GoogleHomeOnboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,8 +165,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E365BF3F20878873008DBA18 /* LocalNotifications.swift in Sources */,
 				E365BF2320877BCA008DBA18 /* ViewController.swift in Sources */,
+				E365BF3B20878873008DBA18 /* GoogleHomeDemo.swift in Sources */,
+				E365BF3E20878873008DBA18 /* GoogleHomeOnboardingViewController.swift in Sources */,
 				E365BF2120877BCA008DBA18 /* AppDelegate.swift in Sources */,
+				E365BF3C20878873008DBA18 /* GoogleHomeDetector.swift in Sources */,
+				E365BF3520877F7C008DBA18 /* ProductCollectionViewCell.swift in Sources */,
+				E365BF3320877C4F008DBA18 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
