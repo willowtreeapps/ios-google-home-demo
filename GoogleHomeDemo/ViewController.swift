@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications
 
 class ViewController: UIViewController, GoogleHomeDemoing {
 
@@ -22,6 +23,7 @@ class ViewController: UIViewController, GoogleHomeDemoing {
         let font = UIFont(name: "Avenir", size: 22.0)!
         self.navigationController?.navigationBar.titleTextAttributes = [.font: font]
         self.navigationController?.navigationBar.tintColor = .white
+        NotificationCenter.default.addObserver(self, selector: #selector(self.didBecomeActive), name: .UIApplicationDidBecomeActive, object: nil)
 
     }
 
@@ -33,6 +35,12 @@ class ViewController: UIViewController, GoogleHomeDemoing {
         guard case .motionShake = motion else { return }
 
         LocalNotificationManager.shared.showGoogleHomeNotification()
+    }
+
+    @objc func didBecomeActive(_ notification: Notification) {
+        LocalNotificationManager.shared.requestPermissions { _, _ in
+            self.startPollingForGoogleHome()
+        }
     }
 
 }
