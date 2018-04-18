@@ -6,8 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -115,17 +113,6 @@
                                     <constraint firstItem="Xr5-CR-6h6" firstAttribute="top" secondItem="LHK-4d-Cxf" secondAttribute="top" id="zBv-oz-vsh"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L25-U1-1Z8">
-                                <rect key="frame" x="335" y="28" width="32" height="32"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="Iyv-R3-9nc"/>
-                                    <constraint firstAttribute="width" constant="32" id="ajV-tl-Efo"/>
-                                </constraints>
-                                <state key="normal" image="back"/>
-                                <connections>
-                                    <action selector="closePressed:" destination="6of-tg-NwM" eventType="touchUpInside" id="wbB-ZU-nKa"/>
-                                </connections>
-                            </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mXS-hr-cMt" userLabel="message2">
                                 <rect key="frame" x="16" y="394" width="343" height="28"/>
                                 <subviews>
@@ -166,22 +153,22 @@
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="wZz-TJ-okq"/>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sE4-6K-adP" userLabel="very last message">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sE4-6K-adP" userLabel="very last message">
                                 <rect key="frame" x="16" y="498" width="343" height="48"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="lidlLogo" translatesAutoresizingMaskIntoConstraints="NO" id="dOz-1n-eOa">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lidlLogo" translatesAutoresizingMaskIntoConstraints="NO" id="dOz-1n-eOa">
                                         <rect key="frame" x="0.0" y="0.0" width="42" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="42" id="pXS-Bt-lhs"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="tryMeOut" translatesAutoresizingMaskIntoConstraints="NO" id="ukg-Xy-Ny1">
+                                    <imageView userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tryMeOut" translatesAutoresizingMaskIntoConstraints="NO" id="ukg-Xy-Ny1">
                                         <rect key="frame" x="52" y="0.0" width="200" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="Mfx-Q7-nV2"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KTX-w1-3zP">
+                                    <imageView userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KTX-w1-3zP">
                                         <rect key="frame" x="52" y="0.0" width="200" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="8HP-WU-GW4"/>
@@ -203,7 +190,7 @@
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="5j4-XW-U5Z"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGy-sY-B7d">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eGy-sY-B7d">
                                 <rect key="frame" x="68" y="564" width="285" height="48"/>
                                 <state key="normal" image="launchAssistantCta"/>
                             </button>
@@ -218,10 +205,21 @@
                                     <constraint firstAttribute="width" constant="225" id="OAB-tG-Sgw"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGs-OJ-fDu">
+                                <rect key="frame" x="327" y="28" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="jf5-J1-eL8"/>
+                                    <constraint firstAttribute="width" constant="32" id="nWb-6T-kuY"/>
+                                </constraints>
+                                <state key="normal" image="back"/>
+                                <connections>
+                                    <action selector="closePressed:" destination="6of-tg-NwM" eventType="touchUpInside" id="tyG-Xv-Wd9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="If2-IP-Lal" firstAttribute="trailing" secondItem="L25-U1-1Z8" secondAttribute="trailingMargin" constant="16" id="2Vz-E8-iaD"/>
+                            <constraint firstItem="sE4-6K-adP" firstAttribute="top" secondItem="F89-qs-hTk" secondAttribute="bottom" constant="24" id="3Hx-zB-af9"/>
                             <constraint firstItem="pem-I2-a5e" firstAttribute="leading" secondItem="If2-IP-Lal" secondAttribute="leading" constant="16" id="4mY-ss-xT6"/>
                             <constraint firstItem="wrp-oo-jtF" firstAttribute="centerX" secondItem="If2-IP-Lal" secondAttribute="centerX" id="6Fe-hP-xSy"/>
                             <constraint firstItem="If2-IP-Lal" firstAttribute="trailing" secondItem="baj-gT-yJR" secondAttribute="trailing" id="7x2-VA-EwG"/>
@@ -232,11 +230,13 @@
                             <constraint firstItem="0rm-KF-Bxd" firstAttribute="leading" secondItem="If2-IP-Lal" secondAttribute="leading" constant="16" id="C1H-4u-B2s"/>
                             <constraint firstItem="LHK-4d-Cxf" firstAttribute="leading" secondItem="If2-IP-Lal" secondAttribute="leading" constant="16" id="HVq-Bq-6xL"/>
                             <constraint firstItem="LHK-4d-Cxf" firstAttribute="top" secondItem="pem-I2-a5e" secondAttribute="bottom" constant="24" id="MED-WQ-YYd"/>
+                            <constraint firstItem="If2-IP-Lal" firstAttribute="trailing" secondItem="fGs-OJ-fDu" secondAttribute="trailing" constant="16" id="Ne7-aN-Fo0"/>
                             <constraint firstItem="baj-gT-yJR" firstAttribute="bottom" secondItem="cpv-jb-onf" secondAttribute="bottom" id="Pfr-pn-XR5"/>
                             <constraint firstItem="If2-IP-Lal" firstAttribute="trailing" secondItem="LHK-4d-Cxf" secondAttribute="trailing" constant="16" id="QRk-Ft-5UI"/>
                             <constraint firstItem="baj-gT-yJR" firstAttribute="top" secondItem="wrp-oo-jtF" secondAttribute="top" id="SPc-t9-8rF"/>
                             <constraint firstItem="If2-IP-Lal" firstAttribute="trailing" secondItem="bwK-g3-d8Z" secondAttribute="trailing" constant="16" id="WaZ-aP-5F5"/>
                             <constraint firstItem="0rm-KF-Bxd" firstAttribute="top" secondItem="bwK-g3-d8Z" secondAttribute="bottom" constant="28" id="XI1-rz-eep"/>
+                            <constraint firstItem="fGs-OJ-fDu" firstAttribute="top" secondItem="If2-IP-Lal" secondAttribute="top" constant="8" id="abE-fo-4oA"/>
                             <constraint firstItem="If2-IP-Lal" firstAttribute="trailing" secondItem="pem-I2-a5e" secondAttribute="trailing" constant="16" id="adg-ts-efz"/>
                             <constraint firstItem="F89-qs-hTk" firstAttribute="leading" secondItem="If2-IP-Lal" secondAttribute="leading" constant="16" id="b9p-BY-KL3"/>
                             <constraint firstItem="bwK-g3-d8Z" firstAttribute="top" relation="greaterThanOrEqual" secondItem="If2-IP-Lal" secondAttribute="top" constant="64" id="fkt-W1-G9w"/>
@@ -250,17 +250,17 @@
                             <constraint firstItem="pem-I2-a5e" firstAttribute="top" secondItem="0rm-KF-Bxd" secondAttribute="bottom" constant="40" id="ofG-DH-FUb"/>
                             <constraint firstItem="If2-IP-Lal" firstAttribute="trailing" secondItem="sE4-6K-adP" secondAttribute="trailing" constant="16" id="q9h-vK-Aab"/>
                             <constraint firstItem="eGy-sY-B7d" firstAttribute="leading" secondItem="KTX-w1-3zP" secondAttribute="leading" id="sXr-Wn-mMX"/>
-                            <constraint firstItem="L25-U1-1Z8" firstAttribute="top" secondItem="If2-IP-Lal" secondAttribute="top" constant="8" id="vdf-5P-Pqr"/>
                             <constraint firstItem="If2-IP-Lal" firstAttribute="trailing" secondItem="0rm-KF-Bxd" secondAttribute="trailing" constant="16" id="wDA-IS-rmg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="If2-IP-Lal"/>
                     </view>
                     <connections>
                         <outlet property="bottomPictureConstraint" destination="mhH-bo-ICG" id="OF8-eD-TxE"/>
-                        <outlet property="closeButton" destination="L25-U1-1Z8" id="q4l-ye-gbF"/>
+                        <outlet property="closeButton" destination="fGs-OJ-fDu" id="iyD-jd-ftR"/>
                         <outlet property="ctaButton" destination="eGy-sY-B7d" id="4Mu-JF-5hx"/>
                         <outlet property="finalMessageImageView" destination="KTX-w1-3zP" id="E9O-0f-jJK"/>
                         <outlet property="finalMessageTextImageView" destination="ukg-Xy-Ny1" id="pPD-Xo-8mQ"/>
+                        <outlet property="fiveSixConstraint" destination="3Hx-zB-af9" id="J0h-k9-xPV"/>
                         <outlet property="fourFiveConstraint" destination="kFX-wZ-Kqv" id="j40-F2-OUm"/>
                         <outlet property="googleHomeImage" destination="wrp-oo-jtF" id="bhs-r6-he2"/>
                         <outlet property="messageBubbleImageView" destination="AUC-Kd-wg2" id="tXV-Ol-TCf"/>
@@ -287,7 +287,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="back" width="64" height="64"/>
+        <image name="back" width="32" height="32"/>
         <image name="hallo" width="201" height="48"/>
         <image name="illustration" width="224" height="239"/>
         <image name="launchAssistantCta" width="285" height="48"/>
