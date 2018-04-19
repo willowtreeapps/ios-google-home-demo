@@ -13,7 +13,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var root: ViewController? {
-        return window?.rootViewController?.childViewControllers.compactMap({$0 as? ViewController}).first
+        return window?.rootViewController as? ViewController
     }
 
 

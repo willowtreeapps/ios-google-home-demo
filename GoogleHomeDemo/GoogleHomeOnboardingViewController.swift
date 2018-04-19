@@ -100,12 +100,18 @@ class GoogleHomeOnboardingViewController: UIViewController {
                        initialSpringVelocity: 0.0,
                        options: [],
                        animations: animations) { _ in
-            UIView.animate(withDuration: 0.5) {
-                self.finalMessageImageView.alpha = 0.0
-                self.finalMessageTextImageView.alpha = 1.0
-                self.ctaButton.alpha = 1.0
-                self.closeButton.alpha = 1.0
-            }
+
+                        UIView.animate(withDuration: 0.5, delay: 0.0, options: [], animations: {
+                            self.finalMessageImageView.alpha = 0.0
+                            self.finalMessageTextImageView.alpha = 1.0
+
+                        }) { _ in
+                            UIView.animate(withDuration: 0.5, delay: 1.0, options: [], animations: {
+                                self.ctaButton.alpha = 1.0
+                                self.closeButton.alpha = 1.0
+                            }, completion: nil)
+                        }
+
         }
 
 

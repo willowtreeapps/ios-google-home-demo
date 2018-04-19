@@ -14,6 +14,11 @@ class LocalNotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
 
 
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+
+        defer {
+            completionHandler()
+        }
+        
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate,
             let root = appDelegate.root else {
             return
@@ -21,9 +26,7 @@ class LocalNotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
 
         root.showGoogleHomeVC()
 
-        defer {
-            completionHandler()
-        }
+
     }
 
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
