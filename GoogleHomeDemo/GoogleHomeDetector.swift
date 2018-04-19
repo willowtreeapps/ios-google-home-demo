@@ -31,7 +31,7 @@ class GoogleHomeDetector: NSObject {
         serviceBrowser.stop()
         timeoutTimer?.invalidate()
         castableDevices = []
-        onDetect?(true)
+        onDetect?(success)
     }
     
     private func homeDetected() {

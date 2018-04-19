@@ -9,6 +9,13 @@
 import UIKit
 import UserNotifications
 
+class LightNavigationController: UINavigationController {
+
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+}
+
 class ViewController: UIViewController, GoogleHomeDemoing {
 
     @IBOutlet var collectionView: UICollectionView!
@@ -19,16 +26,11 @@ class ViewController: UIViewController, GoogleHomeDemoing {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
-        setNeedsStatusBarAppearanceUpdate()
-        let font = UIFont(name: "Avenir", size: 22.0)!
-        self.navigationController?.navigationBar.titleTextAttributes = [.font: font]
+        let font = UIFont(name: "NeuzeitGro-Bol", size: 22.0)!
+        self.navigationController?.navigationBar.titleTextAttributes = [.font: font, .foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.tintColor = .white
         NotificationCenter.default.addObserver(self, selector: #selector(self.didBecomeActive), name: .UIApplicationDidBecomeActive, object: nil)
 
-    }
-
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
     }
 
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {

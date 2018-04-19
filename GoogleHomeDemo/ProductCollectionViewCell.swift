@@ -16,6 +16,6 @@ class ProductCollectionViewCell: UICollectionViewCell {
     func congifure(with product: Product) {
         self.imageView.image = product.image
         self.titleLabel.text = product.title
-        self.titleLabel.font = UIFont(name: "Avenir", size: 16.0)!
+        self.titleLabel.font = UIFont(name: "NeuzeitGro-Reg", size: 16.0)!
     }
 }
