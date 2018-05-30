@@ -1,6 +1,6 @@
 //
 //  LocalNotifications.swift
-//  Lidl
+//  SmartSpeakerDetectorSample
 //
 //  Created by Luke Tomlinson on 4/11/18.
 //  Copyright © 2018 WillowTree. All rights reserved.
@@ -12,31 +12,32 @@ import UIKit
 
 class LocalNotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
 
-
-    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                didReceive response: UNNotificationResponse,
+                                withCompletionHandler completionHandler: @escaping () -> Void) {
         defer {
             completionHandler()
         }
         
-        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate,
-            let root = appDelegate.root else {
+        guard
+            let appDelegate = UIApplication.shared.delegate as? AppDelegate,
+            let root = appDelegate.root
+        else {
             return
         }
 
         root.showGoogleHomeVC()
-
-
     }
 
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.alert, .sound, .badge])
     }
 }
 
 class LocalNotificationManager {
 
-    private init() {}
     static let shared = LocalNotificationManager()
     let delegate = LocalNotificationDelegate()
 
@@ -45,14 +46,14 @@ class LocalNotificationManager {
         center.delegate = self.delegate
         return center
     }()
-
+    
+    private init() {}
 
     func requestPermissions(completion: @escaping (Bool, Error?) -> Void) {
         center.requestAuthorization(options: [.alert, .sound, .badge], completionHandler: completion)
     }
 
     func showGoogleHomeNotification(_ delay: TimeInterval = 1.0) {
-
         let content = UNMutableNotificationContent()
         content.title = "Grocr is now on Google Home!"
         content.body = "You can add to your shopping list, discover new sales, and search for products at your store!"
@@ -61,12 +62,10 @@ class LocalNotificationManager {
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: delay, repeats: false)
         let request = UNNotificationRequest(identifier: "ContentIdentifier", content: content, trigger: trigger)
 
-        center.add(request) { (error) in
+        center.add(request) { error in
             if error != nil {
                 print("error \(String(describing: error))")
             }
         }
-
-
     }
 }

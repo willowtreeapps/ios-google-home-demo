@@ -1,6 +1,6 @@
 //
-//  GoogleHomeDemo.swift
-//  Lidl
+//  SmartSpeakerDetectorDemo.swift
+//  SmartSpeakerDetectorSample
 //
 //  Created by Luke Tomlinson on 4/10/18.
 //  Copyright © 2018 WillowTree. All rights reserved.
@@ -15,9 +15,9 @@ extension UIViewController {
     }
 }
 
-protocol GoogleHomeDemoing: class {
+protocol SmartSpeakerDetectorDemoing: class {
     var pollInterval: TimeInterval { get }
-    var detector: GoogleHomeDetector { get }
+    var detector: SmartSpeakerDetector { get }
     var googleHomeTimer: Timer? { get set }
 
     func onDetect(_ success: Bool)
@@ -25,9 +25,9 @@ protocol GoogleHomeDemoing: class {
     func stopPollingForGoogleHome()
 }
 
-extension GoogleHomeDemoing where Self: UIViewController {
+extension SmartSpeakerDetectorDemoing where Self: UIViewController {
 
-    var pollInterval: TimeInterval { return 60.0}
+    var pollInterval: TimeInterval { return 60.0 }
 
     func startPollingForGoogleHome() {
         resumePollingForGoogleHome()
@@ -35,8 +35,8 @@ extension GoogleHomeDemoing where Self: UIViewController {
     }
 
     func resumePollingForGoogleHome() {
-        googleHomeTimer = Timer.scheduledTimer(withTimeInterval: pollInterval, repeats: true){ [unowned self] blockTimer in
-            self.detector.detect(self.onDetect)
+        googleHomeTimer = Timer.scheduledTimer(withTimeInterval: pollInterval, repeats: true) { [unowned self] blockTimer in
+            self.detector.detectGoogleHome(self.onDetect)
         }
     }
 
@@ -56,7 +56,7 @@ extension GoogleHomeDemoing where Self: UIViewController {
     }
 
     func showGoogleHomeVC(completion: (() -> Void)? = nil) {
-        let vc = GoogleHomeOnboardingViewController.fromStoryboard()
+        let vc = SmartSpeakerDetectorOnboardingViewController.fromStoryboard()
         let presentAlert = { [weak self] () -> Void in self?.present(vc, animated: true, completion: completion)}
 
         if self.presentedViewController != nil {
@@ -77,4 +77,3 @@ extension GoogleHomeDemoing where Self: UIViewController {
         return alert
     }
 }
-

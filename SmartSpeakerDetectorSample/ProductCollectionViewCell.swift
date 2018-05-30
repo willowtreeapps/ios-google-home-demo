@@ -1,6 +1,6 @@
 //
 //  ProductCollectionViewCell.swift
-//  GoogleHomeDemo
+//  SmartSpeakerDetectorSample
 //
 //  Created by Luke Tomlinson on 4/18/18.
 //  Copyright © 2018 Luke Tomlinson. All rights reserved.

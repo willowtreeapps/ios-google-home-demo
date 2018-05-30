@@ -1,6 +1,6 @@
 //
-//  GoogleHomeOnboardingViewController.swift
-//  Lidl
+//  SmartSpeakerDetectorOnboardingViewController.swift
+//  SmartSpeakerDetectorSample
 //
 //  Created by Luke Tomlinson on 4/11/18.
 //  Copyright © 2018 WillowTree. All rights reserved.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GoogleHomeOnboardingViewController: UIViewController {
+class SmartSpeakerDetectorOnboardingViewController: UIViewController {
 
     @IBOutlet var messageViewHeight: NSLayoutConstraint!
     @IBOutlet var topConstraint: NSLayoutConstraint!
@@ -38,20 +38,25 @@ class GoogleHomeOnboardingViewController: UIViewController {
     let animatingMessage: [UIImage] = [#imageLiteral(resourceName: "msg1"),#imageLiteral(resourceName: "msg2"),#imageLiteral(resourceName: "msg3")]
 
     var spacingConstraints: [NSLayoutConstraint] {
-        return [zeroOneConstraint, oneTwoConstraint, twoThreeConstraint, threeFourConstraint,fourFiveConstraint, fiveSixConstraint]
+        return [zeroOneConstraint,
+                oneTwoConstraint,
+                twoThreeConstraint,
+                threeFourConstraint,
+                fourFiveConstraint,
+                fiveSixConstraint]
     }
 
     var fadeInViews: [UIView] {
         return [messageBubbleTextImageView,
-         finalMessageTextImageView,
-         ctaButton,
-         closeButton,
-         googleHomeImage]
+                finalMessageTextImageView,
+                ctaButton,
+                closeButton,
+                googleHomeImage]
     }
 
-    static func fromStoryboard() -> GoogleHomeOnboardingViewController {
+    static func fromStoryboard() -> SmartSpeakerDetectorOnboardingViewController {
         let storyboard = UIStoryboard(name: "GoogleHomeOnboarding", bundle: nil)
-        return storyboard.instantiateInitialViewController() as! GoogleHomeOnboardingViewController
+        return storyboard.instantiateInitialViewController() as! SmartSpeakerDetectorOnboardingViewController
     }
 
     override func viewDidLoad() {
@@ -88,10 +93,18 @@ class GoogleHomeOnboardingViewController: UIViewController {
     }
 
     func finalAnimation() {
-        let animations = {
+        let initialAnimations = {
             self.fiveSixConstraint.constant = -154
-            self.messageViews.forEach({$0.alpha = 0.0})
+            self.messageViews.forEach ({ $0.alpha = 0.0 })
             self.view.layoutIfNeeded()
+        }
+        let messageAnimations = {
+            self.finalMessageImageView.alpha = 0.0
+            self.finalMessageTextImageView.alpha = 1.0
+        }
+        let buttonAnimations = {
+            self.ctaButton.alpha = 1.0
+            self.closeButton.alpha = 1.0
         }
 
         UIView.animate(withDuration: 1.25,
@@ -99,26 +112,23 @@ class GoogleHomeOnboardingViewController: UIViewController {
                        usingSpringWithDamping: 0.8,
                        initialSpringVelocity: 0.0,
                        options: [],
-                       animations: animations) { _ in
-
-                        UIView.animate(withDuration: 0.5, delay: 0.0, options: [], animations: {
-                            self.finalMessageImageView.alpha = 0.0
-                            self.finalMessageTextImageView.alpha = 1.0
-
-                        }) { _ in
-                            UIView.animate(withDuration: 0.5, delay: 1.0, options: [], animations: {
-                                self.ctaButton.alpha = 1.0
-                                self.closeButton.alpha = 1.0
-                            }, completion: nil)
+                       animations: initialAnimations) { _ in
+                        
+                        UIView.animate(withDuration: 0.5,
+                                       delay: 0.0,
+                                       options: [],
+                                       animations: messageAnimations) { _ in
+                                        
+                                        UIView.animate(withDuration: 0.5,
+                                                       delay: 1.0,
+                                                       options: [],
+                                                       animations: buttonAnimations,
+                                                       completion: nil)
                         }
-
         }
-
-
     }
 
     func initialAnimation(completion: @escaping (Bool) -> Void) {
-
         let animations = {
             self.bottomPictureConstraint.constant = 0.0
             self.zeroToPicture.constant = 77
@@ -138,10 +148,9 @@ class GoogleHomeOnboardingViewController: UIViewController {
     func animateChat(completion: @escaping (Bool) -> Void) {
         var delay: TimeInterval = 1.0
 
-        let items = zip(zip(0...10,self.spacingConstraints.dropLast()),zip(spacings, cumulativeSpacings)).map { item  in
+        let items = zip(zip(0...10, self.spacingConstraints.dropLast()), zip(spacings, cumulativeSpacings)).map { item in
             return (item.0.0, item.0.1, item.1.0, item.1.1)
         }
-
 
         for (index, constraint, constant, cumulative) in items {
 
@@ -182,17 +191,14 @@ class GoogleHomeOnboardingViewController: UIViewController {
                     }, completion: nil)
                 }
             default:
-                complete = {_ in
+                complete = { _ in
                     fadeOutViews.forEach { fadeView in
                         UIView.animate(withDuration: 0.5, delay: 0.0, options: [], animations: {
                             fadeView.alpha -= 0.2
                         }, completion: nil)
-
                     }
                 }
             }
-
-
 
             UIView.animate(withDuration: 1.0,
                            delay: delay,

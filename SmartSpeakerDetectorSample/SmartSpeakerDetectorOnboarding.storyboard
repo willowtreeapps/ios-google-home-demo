@@ -10,15 +10,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="NeuzeitGro-Bol.otf">
-            <string>NeuzeitGro-Bol</string>
+        <array key="Karla-Bold.ttf">
+            <string>Karla-Bold</string>
         </array>
     </customFonts>
     <scenes>
-        <!--Google Home Onboarding View Controller-->
+        <!--Smart Speaker Detector Onboarding View Controller-->
         <scene sceneID="9Ay-M4-gMY">
             <objects>
-                <viewController id="6of-tg-NwM" customClass="GoogleHomeOnboardingViewController" customModule="GoogleHomeDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6of-tg-NwM" customClass="SmartSpeakerDetectorOnboardingViewController" customModule="GoogleHomeDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cpv-jb-onf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,7 +48,7 @@
                                             <constraint firstAttribute="width" constant="200" id="7Ft-5O-J8f"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lidlLogo" translatesAutoresizingMaskIntoConstraints="NO" id="cLg-yC-hhe">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grocrLogoRound" translatesAutoresizingMaskIntoConstraints="NO" id="cLg-yC-hhe">
                                         <rect key="frame" x="0.0" y="0.0" width="42" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="42" id="ZT8-4f-En4"/>
@@ -80,7 +80,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;What's in my shopping list?&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQd-Nn-Kyr">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="28"/>
-                                        <fontDescription key="fontDescription" name="NeuzeitGro-Bol" family="Neuzeit Grotesk" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="24"/>
                                         <color key="textColor" red="0.29019607843137252" green="0.56470588235294117" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -99,7 +99,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Add apples to my Sunday list&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xr5-CR-6h6">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="28"/>
-                                        <fontDescription key="fontDescription" name="NeuzeitGro-Bol" family="Neuzeit Grotesk" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="24"/>
                                         <color key="textColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -118,7 +118,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;What's on sale this week?&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsO-aq-gar">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="28"/>
-                                        <fontDescription key="fontDescription" name="NeuzeitGro-Bol" family="Neuzeit Grotesk" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="24"/>
                                         <color key="textColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -137,7 +137,7 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;Does my Grocr have mangos?&quot;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iI9-Ec-Pxb">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="28"/>
-                                        <fontDescription key="fontDescription" name="NeuzeitGro-Bol" family="Neuzeit Grotesk" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="24"/>
                                         <color key="textColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -156,7 +156,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sE4-6K-adP" userLabel="very last message">
                                 <rect key="frame" x="16" y="498" width="343" height="48"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lidlLogo" translatesAutoresizingMaskIntoConstraints="NO" id="dOz-1n-eOa">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grocrLogoRound" translatesAutoresizingMaskIntoConstraints="NO" id="dOz-1n-eOa">
                                         <rect key="frame" x="0.0" y="0.0" width="42" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="42" id="pXS-Bt-lhs"/>
@@ -288,10 +288,10 @@
     </scenes>
     <resources>
         <image name="back" width="32" height="32"/>
+        <image name="grocrLogoRound" width="42" height="47"/>
         <image name="hallo" width="201" height="48"/>
         <image name="illustration" width="224" height="239"/>
         <image name="launchAssistantCta" width="285" height="48"/>
-        <image name="lidlLogo" width="42" height="47"/>
         <image name="title" width="330" height="88"/>
         <image name="tryMeOut" width="113" height="48"/>
     </resources>
