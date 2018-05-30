@@ -55,7 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				C14D61FA20BF19100098168C /* Karla-Bold.ttf */,
-				E365BF1F20877BCA008DBA18 /* GoogleHomeDemo */,
+				E365BF1F20877BCA008DBA18 /* SmartSpeakerDetectorSample */,
 				E365BF1E20877BCA008DBA18 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,7 +68,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E365BF1F20877BCA008DBA18 /* GoogleHomeDemo */ = {
+		E365BF1F20877BCA008DBA18 /* SmartSpeakerDetectorSample */ = {
 			isa = PBXGroup;
 			children = (
 				E365BF2020877BCA008DBA18 /* AppDelegate.swift */,
@@ -85,7 +85,7 @@
 				E365BF2920877BCB008DBA18 /* LaunchScreen.storyboard */,
 				E365BF2C20877BCB008DBA18 /* Info.plist */,
 			);
-			path = GoogleHomeDemo;
+			path = SmartSpeakerDetectorSample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,7 +104,7 @@
 			dependencies = (
 			);
 			name = SmartSpeakerDetectorSample;
-			productName = GoogleHomeDemo;
+			productName = SmartSpeakerDetectorSample;
 			productReference = E365BF1D20877BCA008DBA18 /* SmartSpeakerDetectorSample.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -314,7 +314,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = Y32EQUAEWX;
-				INFOPLIST_FILE = GoogleHomeDemo/Info.plist;
+				INFOPLIST_FILE = SmartSpeakerDetectorSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -335,7 +335,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = Y32EQUAEWX;
-				INFOPLIST_FILE = GoogleHomeDemo/Info.plist;
+				INFOPLIST_FILE = SmartSpeakerDetectorSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
