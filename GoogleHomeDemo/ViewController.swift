@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  GoogleHomeDemo
+//  SmartSpeakerDetectorSample
 //
 //  Created by Luke Tomlinson on 4/18/18.
 //  Copyright © 2018 Luke Tomlinson. All rights reserved.
@@ -16,17 +16,17 @@ class LightNavigationController: UINavigationController {
     }
 }
 
-class ViewController: UIViewController, GoogleHomeDemoing {
+class ViewController: UIViewController, SmartSpeakerDetectorDemoing {
 
     @IBOutlet var collectionView: UICollectionView!
 
     var googleHomeTimer: Timer? = nil
-    let detector: GoogleHomeDetector = GoogleHomeDetector()
+    let detector: SmartSpeakerDetector = SmartSpeakerDetector()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
-        let font = UIFont(name: "NeuzeitGro-Bol", size: 22.0)!
+        let font = UIFont(name: "Karla-Bold", size: 22.0)!
         self.navigationController?.navigationBar.titleTextAttributes = [.font: font, .foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.tintColor = .white
         NotificationCenter.default.addObserver(self, selector: #selector(self.didBecomeActive), name: .UIApplicationDidBecomeActive, object: nil)
@@ -50,7 +50,6 @@ class ViewController: UIViewController, GoogleHomeDemoing {
 extension UIViewController: UICollectionViewDataSource {
 
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
         let cell =  collectionView.dequeueReusableCell(withReuseIdentifier: "ProductCell", for: indexPath) as! ProductCollectionViewCell
         let product = products[indexPath.item]
         cell.congifure(with: product)

@@ -11,15 +11,15 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="NeuzeitGro-Bol.otf">
-            <string>NeuzeitGro-Bol</string>
+        <array key="Karla-Bold.ttf">
+            <string>Karla-Bold</string>
         </array>
     </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GoogleHomeDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SmartSpeakerDetectorSample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,7 +34,7 @@
                                     <inset key="sectionInset" minX="15" minY="15" maxX="15" maxY="15"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="74o-hX-MJK" customClass="ProductCollectionViewCell" customModule="GoogleHomeDemo" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="74o-hX-MJK" customClass="ProductCollectionViewCell" customModule="SmartSpeakerDetectorSample" customModuleProvider="target">
                                         <rect key="frame" x="15" y="15" width="167" height="195"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -61,7 +61,7 @@
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXH-8L-YQa">
                                                     <rect key="frame" x="0.0" y="175" width="167" height="20"/>
-                                                    <fontDescription key="fontDescription" name="NeuzeitGro-Bol" family="Neuzeit Grotesk" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="17"/>
                                                     <color key="textColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="0.9452054795" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -98,7 +98,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="58" id="0nr-YT-l7E"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="NeuzeitGro-Bol" family="Neuzeit Grotesk" pointSize="22"/>
+                                        <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="22"/>
                                         <color key="textColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="0.9452054795" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
