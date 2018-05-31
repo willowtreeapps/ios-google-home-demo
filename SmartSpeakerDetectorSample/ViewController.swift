@@ -30,7 +30,6 @@ class ViewController: UIViewController, SmartSpeakerDetectorDemoing {
         self.navigationController?.navigationBar.titleTextAttributes = [.font: font, .foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.tintColor = .white
         NotificationCenter.default.addObserver(self, selector: #selector(self.didBecomeActive), name: .UIApplicationDidBecomeActive, object: nil)
-
     }
 
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
@@ -44,7 +43,6 @@ class ViewController: UIViewController, SmartSpeakerDetectorDemoing {
             self.startPollingForGoogleHome()
         }
     }
-
 }
 
 extension UIViewController: UICollectionViewDataSource {
@@ -61,4 +59,3 @@ extension UIViewController: UICollectionViewDataSource {
         return products.count
     }
 }
-

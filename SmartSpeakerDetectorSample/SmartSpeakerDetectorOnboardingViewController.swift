@@ -55,7 +55,7 @@ class SmartSpeakerDetectorOnboardingViewController: UIViewController {
     }
 
     static func fromStoryboard() -> SmartSpeakerDetectorOnboardingViewController {
-        let storyboard = UIStoryboard(name: "GoogleHomeOnboarding", bundle: nil)
+        let storyboard = UIStoryboard(name: "SmartSpeakerDetectorOnboarding", bundle: nil)
         return storyboard.instantiateInitialViewController() as! SmartSpeakerDetectorOnboardingViewController
     }
 

@@ -10,12 +10,10 @@ about detected devices
 
 ## Approach
 
-We are using an arp table lookup to find devices on the local network.
-
-Since Google Home uses Cast SDK, detection should be reliable.
+We are using mDNS lookup to find devices on the local network. Since Google Home uses Cast SDK, detection should be reliable.
 
 Amazon Alexa device detection update will be coming soon.
 
 ## Example of Detected Google Home Device
 
-<img src="artwork/grocr_screenshot.png" alt="screenshot" style="height: 150px;"/>
+<img src="artwork/grocr_screenshot.png" alt="screenshot" style="height: 120px;"/>
