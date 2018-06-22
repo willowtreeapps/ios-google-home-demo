@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Karla-Bold.ttf">
+            <string>Karla-Bold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SmartSpeakerDetectorSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xry-CO-Af0">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lQf-ei-R5I">
+                                    <size key="itemSize" width="167" height="195"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="15" minY="15" maxX="15" maxY="15"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductCell" id="74o-hX-MJK" customClass="ProductCollectionViewCell" customModule="SmartSpeakerDetectorSample" customModuleProvider="target">
+                                        <rect key="frame" x="15" y="15" width="167" height="195"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="167" height="195"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GXQ-kb-1Wu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="167" height="167"/>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uKC-6g-X71">
+                                                            <rect key="frame" x="0.0" y="0.0" width="167" height="167"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="uKC-6g-X71" secondAttribute="height" multiplier="1:1" id="qn8-vx-dup"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="GXQ-kb-1Wu" secondAttribute="height" multiplier="1:1" id="3fj-NT-eF5"/>
+                                                        <constraint firstItem="uKC-6g-X71" firstAttribute="leading" secondItem="GXQ-kb-1Wu" secondAttribute="leading" id="Izp-I4-RTC"/>
+                                                        <constraint firstItem="uKC-6g-X71" firstAttribute="top" secondItem="GXQ-kb-1Wu" secondAttribute="top" id="kTu-Mp-lYe"/>
+                                                        <constraint firstAttribute="trailing" secondItem="uKC-6g-X71" secondAttribute="trailing" id="skq-HM-18e"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UXH-8L-YQa">
+                                                    <rect key="frame" x="0.0" y="175" width="167" height="20"/>
+                                                    <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="0.9452054795" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="GXQ-kb-1Wu" secondAttribute="trailing" id="Aed-NK-QNu"/>
+                                            <constraint firstAttribute="trailing" secondItem="UXH-8L-YQa" secondAttribute="trailing" id="TPZ-ax-B8u"/>
+                                            <constraint firstItem="UXH-8L-YQa" firstAttribute="leading" secondItem="74o-hX-MJK" secondAttribute="leading" id="ZbU-dP-me3"/>
+                                            <constraint firstItem="GXQ-kb-1Wu" firstAttribute="top" secondItem="74o-hX-MJK" secondAttribute="top" id="uef-2S-ffS"/>
+                                            <constraint firstItem="UXH-8L-YQa" firstAttribute="top" secondItem="GXQ-kb-1Wu" secondAttribute="bottom" constant="8" id="x9f-ZM-adu"/>
+                                            <constraint firstItem="GXQ-kb-1Wu" firstAttribute="leading" secondItem="74o-hX-MJK" secondAttribute="leading" id="xPn-ov-SxE"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="uKC-6g-X71" id="rtd-JJ-vcB"/>
+                                            <outlet property="shadowView" destination="GXQ-kb-1Wu" id="3Rn-k4-kMC"/>
+                                            <outlet property="titleLabel" destination="UXH-8L-YQa" id="68g-3s-cRz"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="1d3-qO-FgG">
+                                <rect key="frame" x="137.5" y="20" width="100" height="42"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="grocrLogo" translatesAutoresizingMaskIntoConstraints="NO" id="qrz-Jc-u2B">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="Ucu-nL-oHI"/>
+                                            <constraint firstAttribute="width" constant="42" id="d7v-Kz-moU"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Grocr" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w8X-ZS-zv5">
+                                        <rect key="frame" x="42" y="0.0" width="58" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="58" id="0nr-YT-l7E"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Karla-Bold" family="Karla" pointSize="22"/>
+                                        <color key="textColor" red="1" green="0.31764705879999999" blue="0.31764705879999999" alpha="0.9452054795" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="4Jw-rL-ekT"/>
+                                    <constraint firstAttribute="height" constant="42" id="YTM-qt-ycz"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Xry-CO-Af0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6ab-x9-UZv"/>
+                            <constraint firstItem="1d3-qO-FgG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Th9-1z-JQ3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xry-CO-Af0" secondAttribute="bottom" id="XZh-fd-PVZ"/>
+                            <constraint firstItem="1d3-qO-FgG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bGZ-kn-kw4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xry-CO-Af0" secondAttribute="trailing" id="hnH-sh-1BW"/>
+                            <constraint firstItem="Xry-CO-Af0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="kWZ-BZ-lWf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="4se-Fh-Ycf">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="keyPath" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="Xry-CO-Af0" id="QvO-01-Clx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1076" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="grocrLogo" width="22" height="20"/>
+    </resources>
+</document>
